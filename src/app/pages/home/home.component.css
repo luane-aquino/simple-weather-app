@@ -1,0 +1,35 @@
+.content {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a1f44;
+}
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 2rem 0;
+}
+
+.wrapper__title {
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 0.02em;
+  padding: 0 0 30px 0;
+  padding: 0;
+}
+
+.wrapper__select {
+}
+
+.select__input {
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  padding: 5px 5px 10px;
+  font-family: "Roboto";
+  font-size: 2rem;
+  color: white;
+}
