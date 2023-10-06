@@ -45,11 +45,14 @@ function showWeatherInfo() {
   let html = ''
 
   for(let i = 0; i < cardsList.length; i++) {
+    const iconUrl = `https://openweathermap.org/img/wn/${cardsList[i].weather[0].icon}@2x.png`
+    const iconDesc = `https://openweathermap.org/img/wn/${cardsList[i].weather[0].description}@2x.png`
+    
     html += `
     <h3>${cardsList[i].name}</h3>
     <span>${cardsList[i].sys.country}</span>
     <p>${cardsList[i].main.temp}°C</p>
-    <i>icon</i>
+    <img src='${iconUrl}' alt='${iconDesc}'/>
     <p>${cardsList[i].weather[0].description}</p>
    `
   }
