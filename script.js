@@ -3,6 +3,7 @@ import KEY from './config.js'
 var formEl = document.getElementById('searchForm')
 var cityEl = document.getElementById('city')
 let cardsEl = document.getElementById('cards')
+let errorMsgEl = document.getElementById('error-msg')
 let cardsList = []
 
 formEl.addEventListener('submit', (event) => {
@@ -18,17 +19,32 @@ function submitForm() {
     if (response.status === 200) {
       return response.json();
     } else {
-      throw new Error("Something went wrong on API server!");
+      throw new Error('not found');
     }
   })
   .then((response) => {
+    hideErrorMessage()
     updateCardsList(response)
     showWeatherInfo()
   })
   .catch((error) => {
-    console.error(error);
+    console.error('msg:',error);
+    showErrorMessage()
   });
 }
+
+function showErrorMessage() {
+  errorMsgEl.classList.remove('invisible')
+  errorMsgEl.setAttribute('aria-hidden', 'false')
+}
+
+function hideErrorMessage() {
+  if(!errorMsgEl.classList.contains('invisible')) {
+    errorMsgEl.classList.add('invisible')
+    errorMsgEl.setAttribute('aria-hidden', 'true')
+  }
+}
+
 
 function updateCardsList(info) {
   let isNewItem = true

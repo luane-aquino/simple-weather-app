@@ -44,3 +44,11 @@ body {
 .button-submit:hover {
   background-color: #c3112d;
 }
+
+.error-msg {
+  color: red;
+}
+
+.invisible {
+  display: none;
+}
