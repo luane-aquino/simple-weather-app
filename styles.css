@@ -1,0 +1,46 @@
+html, button, input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: #0a1f44;
+}
+
+.container {
+  margin: 3rem auto 1rem;
+  width: fit-content;
+}
+
+.title {
+  color: #fff;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.input::placeholder {
+  opacity: 0.5;
+  color: #fff;
+}
+
+.button-submit {
+  background-color: #ff1e42;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-left: 16px;
+}
+
+.button-submit:hover {
+  background-color: #c3112d;
+}

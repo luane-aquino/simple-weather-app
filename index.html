@@ -1,17 +1,25 @@
 <!DOCTYPE HTML>
 <html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
 
 <body>
-  <h1>Simple Weather App</h1>
+  <div class="container">
+    <h1 class="title">Simple Weather App</h1>
 
-  <!-- search city -->
-  <form id="searchForm">
-    <input id="city" type="text" placeholder="search for a city"/>
-    <button type="submit">submit</button>
-  </form>
+    <!-- search city -->
+    <form id="searchForm">
+      <input class="input" id="city" type="text" placeholder="search for a city"/>
+      <button type="submit" class="button-submit">submit</button>
+    </form>
 
-  <!-- cards -->
-  <div id="cards"></div>
+    <!-- cards -->
+    <div id="cards"></div>
+  </div>
 
   <script src="./script.js" type="module"></script>
 </body>
