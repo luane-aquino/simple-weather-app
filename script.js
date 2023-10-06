@@ -6,19 +6,9 @@ let cardsEl = document.getElementById('cards')
 let cardsList = []
 
 formEl.addEventListener('submit', (event) => {
-  console.log('***[1] key',KEY);
   event.preventDefault()
   submitForm()
   clearField()
-})
-
-cityEl.addEventListener('keyup', (event) => {
-  console.log('***[2]',);
-  if(event.key === 'Enter') {
-    console.log('***[3]',);
-    submitForm()
-    clearField()
-  }
 })
 
 function submitForm() {
@@ -32,7 +22,6 @@ function submitForm() {
     }
   })
   .then((response) => {
-    console.log(response);
     cardsList.push(response)
     showWeatherInfo()
   })
