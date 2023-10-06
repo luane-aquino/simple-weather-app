@@ -22,12 +22,27 @@ function submitForm() {
     }
   })
   .then((response) => {
-    cardsList.push(response)
+    updateCardsList(response)
     showWeatherInfo()
   })
   .catch((error) => {
     console.error(error);
   });
+}
+
+function updateCardsList(info) {
+  let isNewItem = true
+
+  const newList = cardsList.map((item) => {
+    if(item.name === info.name && item.sys.country === info.sys.country) {
+      isNewItem = false
+      return info
+    }
+    return item
+  })
+
+  cardsList = newList
+  isNewItem && cardsList.push(info)
 }
 
 function showWeatherInfo() {
