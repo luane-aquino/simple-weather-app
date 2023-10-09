@@ -1,28 +1,39 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-<body>
-  <div class="container">
-    <h1 class="title">Simple Weather App</h1>
+  <body>
+    <div class="container">
+      <div class="title-input-wrapper">
+        <h1 class="title">Simple Weather App</h1>
 
-    <!-- search city -->
-    <form id="searchForm">
-      <input class="input" id="city" type="text" placeholder="search for a city"/>
-      <p class="invisible" id="error-msg" aria-hidden="true">please search for a valid city</p>
-      <button type="submit" class="button-submit">submit</button>
-    </form>
+        <!-- search city -->
+        <form id="searchForm">
+          <input
+            class="input"
+            id="city"
+            type="text"
+            placeholder="search for a city"
+          />
+          <p class="invisible" id="error-msg" aria-hidden="true">
+            please search for a valid city
+          </p>
+          <button type="submit" class="button-submit">submit</button>
+        </form>
+      </div>
 
-    <!-- cards -->
-    <div id="cards"></div>
-  </div>
+      <!-- cards -->
+      <ul id="cards" class="cards"></ul>
+    </div>
 
-  <script src="./script.js" type="module"></script>
-</body>
-
+    <script src="./script.js" type="module"></script>
+  </body>
 </html>

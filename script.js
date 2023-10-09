@@ -68,11 +68,20 @@ function showWeatherInfo() {
     const iconDesc = `https://openweathermap.org/img/wn/${cardsList[i].weather[0].description}@2x.png`;
 
     html += `
-    <h3>${cardsList[i].name}</h3>
-    <span>${cardsList[i].sys.country}</span>
-    <p>${cardsList[i].main.temp}°C</p>
-    <img src='${iconUrl}' alt='${iconDesc}'/>
-    <p>${cardsList[i].weather[0].description}</p>
+    <li class='card'>
+      <div class='card__city-country-wrapper'>
+        <h3 class='card__title'>${cardsList[i].name}</h3>
+        <span class='card__badge'>${cardsList[i].sys.country}</span>
+      </div>
+      <div class='card__temperature-wrapper'>
+        <p class='temperature-wrapper__number'>${Math.round(
+          cardsList[i].main.temp,
+        )}</p>
+        <span class='temperature-wrapper__symbol'>°C</span>
+      </div>
+      <img src='${iconUrl}' alt='${iconDesc}' width='100' height='100'/>
+      <p class='card__weather-desc'>${cardsList[i].weather[0].description}</p>
+    </li>
    `;
   }
 
