@@ -105,13 +105,13 @@ body {
 .card__temperature-wrapper {
   display: flex;
   gap: 8px;
-  margin-top: 8px;
+  margin-top: 16px;
   color: #1e2432;
 }
 
 .temperature-wrapper__number {
   margin: 0;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
