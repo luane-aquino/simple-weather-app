@@ -79,7 +79,7 @@ function showWeatherInfo() {
         )}</p>
         <span class='temperature-wrapper__symbol'>°C</span>
       </div>
-      <img src='${iconUrl}' alt='${iconDesc}' width='100' height='100'/>
+      <img src='${iconUrl}' alt='${iconDesc}' width='80' height='80'/>
       <p class='card__weather-desc'>${cardsList[i].weather[0].description}</p>
     </li>
    `;

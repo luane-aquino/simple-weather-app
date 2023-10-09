@@ -74,8 +74,8 @@ body {
 
 .card {
   background-color: white;
-  width: 164px;
-  height: 253px;
+  width: 140px;
+  height: 216px;
   border-radius: 20px;
   box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.4);
   padding: 16px;
@@ -105,8 +105,7 @@ body {
 .card__temperature-wrapper {
   display: flex;
   gap: 8px;
-  margin-top: 16px;
-  margin-bottom: 8px;
+  margin-top: 8px;
   color: #1e2432;
 }
 
