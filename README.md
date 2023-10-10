@@ -1,4 +1,4 @@
-# Simple Weather App (under construction 🏗️)
+# Simple Weather App
 
 This project is a simple weather app using vanilla Javascript and [OpenWeather API](https://openweathermap.org/).
 
