@@ -5,6 +5,7 @@ var cityEl = document.getElementById("city");
 let cardsEl = document.getElementById("cards");
 let errorMsgEl = document.getElementById("error-msg");
 let cardsList = [];
+const temp = "lu";
 
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
