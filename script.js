@@ -23,17 +23,30 @@ function submitForm() {
       }
     })
     .then((response) => {
+      if (cityAlreadyExist(response)) {
+        throw new Error(
+          `${response.name} ${response.sys.country} city already exist`,
+        );
+      }
       hideErrorMessage();
       updateCardsList(response);
       showWeatherInfo();
     })
     .catch((error) => {
       console.error("msg:", error);
-      showErrorMessage();
+      const errorText = error.toString().replace("Error: ", "");
+      showErrorMessage(errorText);
     });
 }
 
-function showErrorMessage() {
+function cityAlreadyExist(city) {
+  return cardsList.find(
+    (item) => item.name === city.name && item.sys.country === city.sys.country,
+  );
+}
+
+function showErrorMessage(text) {
+  errorMsgEl.innerText = text;
   errorMsgEl.classList.add("visible");
   errorMsgEl.setAttribute("aria-hidden", "false");
 }
