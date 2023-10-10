@@ -1,3 +1,13 @@
+:root {
+  --bg_main: #0a1f44;
+  --text_light: #fff;
+  --text_med: #53627c;
+  --text_dark: #1e2432;
+  --red: #ff1e42;
+  --darkred: #c3112d;
+  --orange: #ff8c00;
+}
+
 html,
 button,
 input {
@@ -6,7 +16,7 @@ input {
 }
 
 body {
-  background-color: #0a1f44;
+  background-color: var(--bg_main);
 }
 
 .container {
@@ -21,7 +31,7 @@ body {
 }
 
 .title {
-  color: #fff;
+  color: var(--text_light);
 }
 
 .form-wrapper {
@@ -32,21 +42,21 @@ body {
   background-color: transparent;
   height: 32px;
   border: none;
-  border-bottom: 1px solid #fff;
-  color: #fff;
+  border-bottom: 1px solid var(--text_light);
+  color: var(--text_light);
 }
 
 .input::placeholder {
   opacity: 0.5;
-  color: #fff;
+  color: var(--text_light);
 }
 
 .button-submit {
-  background-color: #ff1e42;
+  background-color: var(--red);
   padding: 8px;
   border: none;
   border-radius: 5px;
-  color: #fff;
+  color: var(--text_light);
   text-transform: uppercase;
   font-size: 0.7rem;
   font-weight: bold;
@@ -56,11 +66,11 @@ body {
 }
 
 .button-submit:hover {
-  background-color: #c3112d;
+  background-color: var(--darkred);
 }
 
 .error-msg {
-  color: #ff1e42;
+  color: var(--red);
   font-size: 0.8rem;
   font-weight: 300;
   margin: 8px 0;
@@ -83,7 +93,7 @@ body {
 }
 
 .card {
-  background-color: white;
+  background-color: var(--text_light);
   width: 140px;
   height: 216px;
   border-radius: 20px;
@@ -98,16 +108,16 @@ body {
 
 .card__title {
   margin: 0;
-  color: #53627c;
+  color: var(--text_med);
   font-weight: 500;
   font-size: 1rem;
 }
 
 .card__badge {
   align-self: flex-start;
-  color: #fff;
+  color: var(--text_light);
   font-size: 0.5rem;
-  background-color: #ff8c00;
+  background-color: var(--orange);
   padding: 0.2em 0.6em;
   border-radius: 30px;
 }
@@ -116,7 +126,7 @@ body {
   display: flex;
   gap: 8px;
   margin-top: 16px;
-  color: #1e2432;
+  color: var(--text_dark);
 }
 
 .temperature-wrapper__number {
@@ -133,7 +143,7 @@ body {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.02rem;
-  color: #53627c;
+  color: var(--text_med);
   font-size: 0.8rem;
 }
 
@@ -143,7 +153,7 @@ body {
 }
 
 .error-message {
-  color: #ff1e42;
+  color: var(--red);
   margin: 8px 0;
   font-size: 0.8rem;
   font-weight: 300;
