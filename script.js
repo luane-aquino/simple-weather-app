@@ -25,7 +25,7 @@ function submitForm() {
     .then((response) => {
       if (cityAlreadyExist(response)) {
         throw new Error(
-          `${response.name} ${response.sys.country} already exist`,
+          `${response.name} ${response.sys.country} already exist, please search for another city`,
         );
       }
       hideErrorMessage();
