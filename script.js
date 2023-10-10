@@ -34,13 +34,13 @@ function submitForm() {
 }
 
 function showErrorMessage() {
-  errorMsgEl.classList.remove("invisible");
+  errorMsgEl.classList.add("visible");
   errorMsgEl.setAttribute("aria-hidden", "false");
 }
 
 function hideErrorMessage() {
-  if (!errorMsgEl.classList.contains("invisible")) {
-    errorMsgEl.classList.add("invisible");
+  if (errorMsgEl.classList.contains("visible")) {
+    errorMsgEl.classList.remove("visible");
     errorMsgEl.setAttribute("aria-hidden", "true");
   }
 }

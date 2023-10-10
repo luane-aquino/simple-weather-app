@@ -16,16 +16,18 @@
         <h1 class="title">Simple Weather App</h1>
 
         <!-- search city -->
-        <form id="searchForm">
-          <input
-            class="input"
-            id="city"
-            type="text"
-            placeholder="search for a city"
-          />
-          <p class="invisible" id="error-msg" aria-hidden="true">
-            please search for a valid city
-          </p>
+        <form id="searchForm" class="form-wrapper">
+          <div class="input-info-wrapper">
+            <input
+              class="input"
+              id="city"
+              type="text"
+              placeholder="search for a city"
+            />
+            <p class="error-msg" id="error-msg" aria-hidden="true">
+              please search for a valid city
+            </p>
+          </div>
           <button type="submit" class="button-submit">submit</button>
         </form>
       </div>

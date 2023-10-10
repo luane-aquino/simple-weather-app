@@ -24,8 +24,13 @@ body {
   color: #fff;
 }
 
+.form-wrapper {
+  display: flex;
+}
+
 .input {
   background-color: transparent;
+  height: 32px;
   border: none;
   border-bottom: 1px solid #fff;
   color: #fff;
@@ -47,6 +52,7 @@ body {
   font-weight: bold;
   letter-spacing: 0.1em;
   margin-left: 16px;
+  height: 32px;
 }
 
 .button-submit:hover {
@@ -54,11 +60,15 @@ body {
 }
 
 .error-msg {
-  color: red;
+  color: #ff1e42;
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin: 8px 0;
+  visibility: hidden;
 }
 
-.invisible {
-  display: none;
+.visible {
+  visibility: visible;
 }
 
 .cards {
@@ -125,4 +135,16 @@ body {
   letter-spacing: 0.02rem;
   color: #53627c;
   font-size: 0.8rem;
+}
+
+.input-info-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.error-message {
+  color: #ff1e42;
+  margin: 8px 0;
+  font-size: 0.8rem;
+  font-weight: 300;
 }
