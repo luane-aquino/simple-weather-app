@@ -69,15 +69,19 @@ function showWeatherInfo() {
 
     html += `
     <li class='card'>
-      <div class='card__city-country-wrapper'>
-        <h3 class='card__title'>${cardsList[i].name}</h3>
-        <span class='card__badge'>${cardsList[i].sys.country}</span>
+      <div class='card__city-country-wrapper' aria-label='${
+        cardsList[i].name
+      }, ${cardsList[i].sys.country}'>
+        <h3 class='card__title' aria-hidden>${cardsList[i].name}</h3>
+        <span class='card__badge' aria-hidden>${cardsList[i].sys.country}</span>
       </div>
-      <div class='card__temperature-wrapper'>
-        <p class='temperature-wrapper__number'>${Math.round(
+      <div class='card__temperature-wrapper' aria-label='${Math.round(
+        cardsList[i].main.temp,
+      )} °C'>
+        <p class='temperature-wrapper__number' aria-hidden>${Math.round(
           cardsList[i].main.temp,
         )}</p>
-        <span class='temperature-wrapper__symbol'>°C</span>
+        <span class='temperature-wrapper__symbol' aria-hidden>°C</span>
       </div>
       <img src='${iconUrl}' alt='${iconDesc}' width='80' height='80'/>
       <p class='card__weather-desc'>${cardsList[i].weather[0].description}</p>
