@@ -5,7 +5,6 @@ var cityEl = document.getElementById("city");
 let cardsEl = document.getElementById("cards");
 let errorMsgEl = document.getElementById("error-msg");
 let cardsList = [];
-const temp = "lu";
 
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -20,13 +19,13 @@ function submitForm() {
       if (response.status === 200) {
         return response.json();
       } else {
-        throw new Error("not found");
+        throw new Error("please search for a valid city");
       }
     })
     .then((response) => {
       if (cityAlreadyExist(response)) {
         throw new Error(
-          `${response.name} ${response.sys.country} city already exist`,
+          `${response.name} ${response.sys.country} already exist`,
         );
       }
       hideErrorMessage();
