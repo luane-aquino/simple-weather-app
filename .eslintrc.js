@@ -3,6 +3,9 @@ module.exports = {
         "browser": true,
         "es2021": true
     },
+    "parserOptions": {
+        "sourceType": "module"
+    },
     "extends": "eslint:recommended",
     "overrides": [
         {
@@ -17,9 +20,4 @@ module.exports = {
             }
         }
     ],
-    "parserOptions": {
-        "ecmaVersion": "latest"
-    },
-    "rules": {
-    }
 }
