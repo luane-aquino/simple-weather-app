@@ -7,6 +7,7 @@ let errorMessageElement = document.getElementById("error-msg");
 let cardsList = [];
 
 const RESPONSE_STATUS_TEXT = {
+  400: "please search for a valid city",
   404: "please search for a valid city",
   500: "an internal error occurred. Try again!",
 };
