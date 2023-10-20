@@ -4,6 +4,7 @@ let searchFormElement = document.getElementById("searchForm");
 let cityElement = document.getElementById("city");
 let cardsElement = document.getElementById("cards");
 let errorMessageElement = document.getElementById("error-msg");
+let emptyIconElement = document.getElementById("empty-icon");
 let cardsList = [];
 
 const RESPONSE_STATUS_TEXT = {
@@ -35,8 +36,14 @@ async function submitForm() {
     showErrorMessage(errorMessage);
     return;
   }
+  cardsList.length === 0 && hideEmptyIcon();
   hideErrorMessage();
   updateCardsList(response);
+}
+
+function hideEmptyIcon() {
+  emptyIconElement.classList.add("hide");
+  emptyIconElement.setAttribute("aria-hidden", "true");
 }
 
 function showErrorMessage(text) {
