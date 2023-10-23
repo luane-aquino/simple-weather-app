@@ -1,6 +1,7 @@
 # Simple Weather App
 
 This project is a simple weather app using vanilla Javascript and [OpenWeather API](https://openweathermap.org/).
+Demo: https://luane-aquino.github.io/simple-weather-app/
 
 ## Technologies
 - Javascript
